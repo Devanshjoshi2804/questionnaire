@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="questionnaire">
+            <div class="question" id="question1">
+                <label for="name">What's your name?</label>
+                <input type="text" id="name" name="name" required>
+                <button type="button" onclick="nextQuestion(2)">Next</button>
+            </div>
+            
+            <div class="question hidden" id="question2">
+                <label for="gender">What's your gender?</label>
+                <input type="text" id="gender" name="gender" required>
+                <button type="button" onclick="nextQuestion(3)">Next</button>
+            </div>
+            
+            <div class="question hidden" id="question3">
+                <label for="dob">When's your birthday?</label>
+                <input type="date" id="dob" name="dob" required>
+                <button type="button" onclick="nextQuestion(4)">Next</button>
+            </div>
+
+            <div class="question hidden" id="question4">
+                <label for="interest">What's your favorite hobby?</label>
+                <input type="text" id="interest" name="interest" required>
+                <button type="button" onclick="nextQuestion(5)">Next</button>
+            </div>
+            
+            <div class="question hidden" id="question5">
+                <label for="feedback">How did you find our first date?</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+                <button type="button" onclick="nextQuestion(6)">Next</button>
+            </div>
+
+            <div class="question hidden" id="question6">
+                <label for="rating">Rate the first date (1-10):</label>
+                <input type="number" id="rating" name="rating" min="1" max="10" required>
+                <button type="button" onclick="nextQuestion(7)">Next</button>
+            </div>
+            
+            <div class="question hidden" id="question7">
+                <label>Would you like to go out again?</label>
+                <div>
+                    <input type="radio" id="yes" name="secondDate" value="yes" required>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="secondDate" value="no">
+                    <label for="no">No</label>
+                </div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div id="animation-container" class="hidden">
+        <h2>Yay! Can't wait for our next adventure!</h2>
+        <div class="hearts">
+            <!-- Heart animations will go here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
